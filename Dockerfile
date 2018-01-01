@@ -3,6 +3,9 @@
 # motion-mmal seems to depend on libraries that are only in wheezy, not jessie
 FROM resin/rpi-raspbian:wheezy-20170628
 
+
+COPY qemu-arm /usr/bin/qemu-arm
+
 # build raspberry pi userland tools from source (allows access to gpu, camera, etc.)
 RUN apt-get update \
     && apt-get upgrade \
